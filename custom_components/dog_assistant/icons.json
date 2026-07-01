@@ -1,0 +1,50 @@
+{
+  "entity": {
+    "button": {
+      "feeding": { "default": "mdi:bowl-mix" },
+      "walk": { "default": "mdi:dog-side" },
+      "poo": { "default": "mdi:emoticon-poop" },
+      "pee": { "default": "mdi:water" }
+    },
+    "sensor": {
+      "feeding_today": { "default": "mdi:bowl-mix" },
+      "walk_today": { "default": "mdi:dog-side" },
+      "poo_today": { "default": "mdi:emoticon-poop" },
+      "pee_today": { "default": "mdi:water" },
+      "last_feeding": { "default": "mdi:clock-outline" },
+      "last_walk": { "default": "mdi:clock-outline" },
+      "last_poo": { "default": "mdi:clock-outline" },
+      "last_pee": { "default": "mdi:clock-outline" },
+      "feeding_remaining": { "default": "mdi:counter" },
+      "walk_remaining": { "default": "mdi:counter" }
+    },
+    "binary_sensor": {
+      "feeding_due": {
+        "default": "mdi:bowl-mix-outline",
+        "state": {
+          "off": "mdi:check-circle-outline",
+          "on": "mdi:alert-circle-outline"
+        }
+      },
+      "walk_due": {
+        "default": "mdi:dog-side",
+        "state": {
+          "off": "mdi:check-circle-outline",
+          "on": "mdi:alert-circle-outline"
+        }
+      }
+    },
+    "event": {
+      "feeding_event": { "default": "mdi:bowl-mix" },
+      "walk_event": { "default": "mdi:dog-side" },
+      "poo_event": { "default": "mdi:emoticon-poop" },
+      "pee_event": { "default": "mdi:water" }
+    }
+  },
+  "services": {
+    "record_feeding": { "service": "mdi:bowl-mix" },
+    "record_walk": { "service": "mdi:dog-side" },
+    "record_poo": { "service": "mdi:emoticon-poop" },
+    "record_pee": { "service": "mdi:water" }
+  }
+}

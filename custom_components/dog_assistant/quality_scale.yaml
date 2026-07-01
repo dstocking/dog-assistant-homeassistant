@@ -1,0 +1,98 @@
+# Integration Quality Scale status for Dog Assistant.
+# This is a fully local "helper" integration with no external dependency, no
+# network/cloud connection and no physical devices, so the device/connection/
+# auth-oriented rules are exempt (with justifications) while everything else is
+# implemented — targeting Platinum-level adherence.
+rules:
+  # Bronze
+  action-setup: done
+  appropriate-polling:
+    status: exempt
+    comment: Event-driven (button presses / services); nothing is polled.
+  brands:
+    status: exempt
+    comment: >-
+      Distributed as a HACS custom repository, not via home-assistant/brands.
+  common-modules: done
+  config-flow-test-coverage: done
+  config-flow: done
+  dependency-transparency:
+    status: exempt
+    comment: No external dependencies; the integration is entirely local.
+  docs-actions: done
+  docs-high-level-description: done
+  docs-installation-instructions: done
+  docs-removal-instructions: done
+  entity-event-setup: done
+  entity-unique-id: done
+  has-entity-name: done
+  runtime-data: done
+  test-before-configure:
+    status: exempt
+    comment: No device or service to connect to during configuration.
+  test-before-setup: done
+  unique-config-entry: done
+
+  # Silver
+  action-exceptions: done
+  config-entry-unloading: done
+  docs-configuration-parameters: done
+  docs-installation-parameters: done
+  entity-unavailable:
+    status: exempt
+    comment: All state is local and always available.
+  integration-owner: done
+  log-when-unavailable:
+    status: exempt
+    comment: The integration never becomes unavailable.
+  parallel-updates: done
+  reauthentication-flow:
+    status: exempt
+    comment: No authentication is used.
+  test-coverage: done
+
+  # Gold
+  devices: done
+  diagnostics: done
+  discovery-update-info:
+    status: exempt
+    comment: No network devices to discover or update.
+  discovery:
+    status: exempt
+    comment: Nothing to discover; set up manually via the UI.
+  docs-data-update: done
+  docs-examples: done
+  docs-known-limitations: done
+  docs-supported-devices:
+    status: exempt
+    comment: No physical devices are involved.
+  docs-supported-functions: done
+  docs-troubleshooting: done
+  docs-use-cases: done
+  dynamic-devices:
+    status: exempt
+    comment: A single static device is created per config entry.
+  entity-category: done
+  entity-device-class: done
+  entity-disabled-by-default:
+    status: exempt
+    comment: Every entity is a primary, useful part of the tracker.
+  entity-translations: done
+  exception-translations: done
+  icon-translations: done
+  reconfiguration-flow: done
+  repair-issues:
+    status: exempt
+    comment: There are no user-actionable failure states to repair.
+  stale-devices:
+    status: exempt
+    comment: A single static device is created per config entry.
+
+  # Platinum
+  async-dependency:
+    status: exempt
+    comment: No external dependency; all logic is local and async.
+  inject-websession:
+    status: exempt
+    comment: The integration makes no HTTP requests.
+  strict-typing: done

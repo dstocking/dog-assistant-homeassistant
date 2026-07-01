@@ -1,0 +1,165 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add your dog",
+        "description": "Track feeding, walks, poo and pee for your dog.",
+        "data": {
+          "name": "Dog's name",
+          "feeding_target": "Feedings per day",
+          "walk_target": "Walks per day"
+        },
+        "data_description": {
+          "name": "Used to name the device and its entities.",
+          "feeding_target": "Target number of feedings each day.",
+          "walk_target": "Target number of walks each day."
+        }
+      },
+      "reconfigure": {
+        "title": "Rename your dog",
+        "data": {
+          "name": "Dog's name"
+        },
+        "data_description": {
+          "name": "Used to name the device and its entities."
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Dog Assistant is already configured. Only a single instance is supported.",
+      "reconfigure_successful": "Renamed successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Dog Assistant options",
+        "data": {
+          "feeding_target": "Feedings per day",
+          "walk_target": "Walks per day",
+          "reset_time": "Daily reset time"
+        },
+        "data_description": {
+          "feeding_target": "Target number of feedings each day.",
+          "walk_target": "Target number of walks each day.",
+          "reset_time": "Time of day the daily counters reset to zero."
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "feeding": { "name": "Feed" },
+      "walk": { "name": "Walk" },
+      "poo": { "name": "Poo" },
+      "pee": { "name": "Pee" }
+    },
+    "sensor": {
+      "feeding_today": { "name": "Feedings today" },
+      "walk_today": { "name": "Walks today" },
+      "poo_today": { "name": "Poos today" },
+      "pee_today": { "name": "Pees today" },
+      "last_feeding": { "name": "Last fed" },
+      "last_walk": { "name": "Last walk" },
+      "last_poo": { "name": "Last poo" },
+      "last_pee": { "name": "Last pee" },
+      "feeding_remaining": { "name": "Feedings remaining" },
+      "walk_remaining": { "name": "Walks remaining" }
+    },
+    "binary_sensor": {
+      "feeding_due": { "name": "Feeding due" },
+      "walk_due": { "name": "Walk due" }
+    },
+    "event": {
+      "feeding_event": { "name": "Feeding" },
+      "walk_event": { "name": "Walk" },
+      "poo_event": { "name": "Poo" },
+      "pee_event": { "name": "Pee" }
+    }
+  },
+  "selector": {
+    "poo_quality": {
+      "options": {
+        "normal": "Normal",
+        "soft": "Soft",
+        "hard": "Hard",
+        "diarrhea": "Diarrhea"
+      }
+    }
+  },
+  "services": {
+    "record_feeding": {
+      "name": "Record feeding",
+      "description": "Log a feeding, optionally with details.",
+      "fields": {
+        "portion": {
+          "name": "Portion",
+          "description": "How much was fed, e.g. '1 cup'."
+        },
+        "food": {
+          "name": "Food",
+          "description": "What was fed."
+        },
+        "fed_by": {
+          "name": "Fed by",
+          "description": "Who fed the dog."
+        }
+      }
+    },
+    "record_walk": {
+      "name": "Record walk",
+      "description": "Log a walk, optionally with details.",
+      "fields": {
+        "duration": {
+          "name": "Duration",
+          "description": "How long the walk lasted, in minutes."
+        },
+        "distance": {
+          "name": "Distance",
+          "description": "How far the walk was, in kilometres."
+        },
+        "walked_by": {
+          "name": "Walked by",
+          "description": "Who walked the dog."
+        }
+      }
+    },
+    "record_poo": {
+      "name": "Record poo",
+      "description": "Log a poo, optionally with details.",
+      "fields": {
+        "quality": {
+          "name": "Quality",
+          "description": "Stool quality."
+        },
+        "location": {
+          "name": "Location",
+          "description": "Where it happened."
+        },
+        "notes": {
+          "name": "Notes",
+          "description": "Free-form notes."
+        }
+      }
+    },
+    "record_pee": {
+      "name": "Record pee",
+      "description": "Log a pee, optionally with details.",
+      "fields": {
+        "location": {
+          "name": "Location",
+          "description": "Where it happened."
+        },
+        "notes": {
+          "name": "Notes",
+          "description": "Free-form notes."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "not_configured": {
+      "message": "Dog Assistant is not set up yet."
+    }
+  }
+}

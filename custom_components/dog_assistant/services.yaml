@@ -1,0 +1,76 @@
+record_feeding:
+  fields:
+    portion:
+      required: false
+      example: "1 cup"
+      selector:
+        text:
+    food:
+      required: false
+      example: "kibble"
+      selector:
+        text:
+    fed_by:
+      required: false
+      example: "Dana"
+      selector:
+        text:
+
+record_walk:
+  fields:
+    duration:
+      required: false
+      example: 30
+      selector:
+        number:
+          min: 0
+          max: 600
+          unit_of_measurement: min
+          mode: box
+    distance:
+      required: false
+      example: 2.5
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 0.1
+          unit_of_measurement: km
+          mode: box
+    walked_by:
+      required: false
+      example: "Dana"
+      selector:
+        text:
+
+record_poo:
+  fields:
+    quality:
+      required: false
+      selector:
+        select:
+          translation_key: poo_quality
+          options:
+            - normal
+            - soft
+            - hard
+            - diarrhea
+    location:
+      required: false
+      selector:
+        text:
+    notes:
+      required: false
+      selector:
+        text:
+
+record_pee:
+  fields:
+    location:
+      required: false
+      selector:
+        text:
+    notes:
+      required: false
+      selector:
+        text:

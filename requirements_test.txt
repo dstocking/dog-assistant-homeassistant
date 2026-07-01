@@ -1,0 +1,3 @@
+# Pulls in a Home Assistant version matched to the test harness, plus pytest.
+pytest-homeassistant-custom-component
+pytest-cov

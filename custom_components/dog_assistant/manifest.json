@@ -1,0 +1,14 @@
+{
+  "domain": "dog_assistant",
+  "name": "Dog Assistant",
+  "codeowners": ["@dstocking"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/dstocking/dog-assistant-homeassistant",
+  "integration_type": "helper",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/dstocking/dog-assistant-homeassistant/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

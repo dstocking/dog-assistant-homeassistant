@@ -8,13 +8,13 @@ A local, no-cloud [Home Assistant](https://www.home-assistant.io/) integration t
 care: **feeding**, **walks**, **poo**, and **pee**. Tap a button (or call a service) to log an event, and
 the integration keeps running counts, timestamps, and a full history you can graph and review over time.
 
-It is a purely local **helper** — no account, no external service, no network calls. Everything is stored
+It is purely **local** — no account, no external service, no network calls. Everything is stored
 on your Home Assistant instance.
 
 ## Features
 
 - One **button per activity** — press to record it at the current time.
-- Configurable **daily targets** for feeding and walks, with **remaining** and **due** helpers.
+- Configurable **daily targets** for feeding and walks, with **remaining** and **due** sensors.
 - A **timestamp** of when each activity last happened (shown as "5 minutes ago" in the UI).
 - A per-activity **event entity**, so every record is a discrete entry in the **Logbook** and history.
 - **Service actions** (`dog_assistant.record_*`) that accept optional details (portion, food, who fed,
@@ -123,7 +123,7 @@ sensors also feed Home Assistant's long-term statistics for trend graphs.
 ## Known limitations
 
 - Tracks a **single dog** (one config entry). Multi-pet support is not yet available.
-- Poo and pee are **occurrence logs** only — they have no daily target, "remaining", or "due" helpers.
+- Poo and pee are **occurrence logs** only — they have no daily target, "remaining", or "due" sensors.
 - The reset time defines a fixed daily window; there is no per-activity schedule.
 
 ## Troubleshooting

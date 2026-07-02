@@ -1,5 +1,5 @@
 # Integration Quality Scale status for Dog Assistant.
-# This is a fully local "helper" integration with no external dependency, no
+# This is a fully local integration with no external dependency, no
 # network/cloud connection and no physical devices, so the device/connection/
 # auth-oriented rules are exempt (with justifications) while everything else is
 # implemented — targeting Platinum-level adherence.
